@@ -11,5 +11,5 @@
     <input type="text" name="description" class="form-control" placeholder="Descrição:" value="{{$plan->description  ?? ''}}">
 </div>
 <div class="form-group">
-    <button type="submit">Enviar</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 </div>
