@@ -7,7 +7,7 @@
         <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Dashboard</a></li>
         <li class="breadcrumb-item"><a href="{{route('plans.index')}}">Planos</a></li>
     </ol>
-    <h1>Planos <a href="{{ route('plans.create')}}" class="btn btn-dark">Novo Plano</a> </h1>
+    <h1>Planos <a href="{{ route('plans.create')}}" class="btn btn-dark"><i class="fas fa-plus-circle"></i></a> </h1>
 @stop
 
 @section('content')
@@ -16,7 +16,7 @@
             <form action="{{ route('plans.search') }}" method="POST" class="form form-inline">
                 @csrf
                 <input type="text" name="filter" placeholder="Nome" class="form-control" value="{{ $filters['filter'] ?? '' }}">
-                <button type="submit" class="btn btn-dark">Filtrar</button>
+                <button type="submit" class="btn btn-dark"><i class="fas fa-filter"></i></button>
             </form>
         </div>
         <div class="card-body">
@@ -42,7 +42,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td style="width:10px">
-                                <a href="{{ route('plans.show', $plan->url ) }}" class="btn btn-warning">VER</a>
+                                <a href="{{ route('plans.show', $plan->url ) }}" class="btn btn-warning"><i class="fas fa-file-alt"></i></a>
                             </td>
                         </tr>
                     @endforeach
