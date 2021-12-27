@@ -42,6 +42,7 @@
                                 R$ {{ number_format($plan->price, 2, ',', '.') }}
                             </td>
                             <td>
+                                <a href="{{ route('details.plan.index', $plan->url ) }}" class="btn btn-primary"><i class="fas fa-file-alt"></i> Detalhes</a>
                                 <a href="{{ route('plans.show', $plan->url ) }}" class="btn btn-warning"><i class="fas fa-file-alt"></i></a>
                                 <a href="{{ route('plans.edit', $plan->url ) }}" class="btn btn-info"><i class="fas fa-pen"></i></a>
                             </td>
